@@ -1,135 +1,153 @@
 99.9
-# Float
-
+# float
 "False"
-# Str
-
+# str
 False
-# Bool
-
+# bool
 '0'
-# Str
-
+# str
 0
-# Int
-
+# int
 True
-# Bool
-
+# bool
 'True'
-# Str
-
+# str
 [{}]
-# List
-
+# list
 {'a': []}
-# Dict
+# dict
 
-# A term or phrase typed into a search box 
-# Str
+# A term or phrase typed into a search box
+# str
 
 # Whether or not a user is logged in
-# Bool
+# bool
 
 # A discount amount to apply to a user's shopping cart
-# Int
+# float
 
 # Whether or not a coupon code is valid
-# Bool
+# bool
 
 # An email address typed into a registration form
-# Str
+# str
 
 # The price of a product
-# Int
+# float
 
 # The email addresses collected from a registration form
-# List
+# list
 
 # Information about applicants to Codeup's data science program
-# Dict
+# dict
 
-'1' + 2
-# Error cannot concatenate an int to a string
+# '1' + 2
+# typeError
 
-6 % 4
-# Takes the remainder of 6 from 4 which is 2
+# 6 % 4
+# takes the remainder of 6 from 4 which is 2 int
 
-type(6 % 4)
-# class 'int'
+# type(6 % 4)
+# describes the type which is an int
 
-type(type(6 % 4))
-# class 'type'
+#type(type(6 % 4))
+# since type is inside of a type the type of type it appears to be is a type...
 
-'3 + 4 is ' + 3 + 4
-# Error cannot concatenate an int to a string
+# '3 + 4 is ' + 3 + 4
+# typeError
 
-0 < 0
-# Statement is False
-
-'False' == False
+# 0 < 0
 # False
 
-True == 'True'
+# 'False' == False
 # False
 
-5 >= -5
-# Statement is True
-
-True or "42"
-# True I guess?
-
-6 % 5
-# Takes the remainder of 6 from 5 which is 1
-
-5 < 4 and 1 == 1
-# False i guess?
-
-'codeup' == 'codeup' and 'codeup' == 'Codeup'
+# True == 'True'
 # False
 
-4 >= 0 and 1 !== '1'
-# Error invalid syntax
-
-6 % 3 == 0
+# 5 >= -5
 # True
 
-5 % 2 != 0
+# True or "42"
 # True
 
-[1] + 2
-# Cannot concatenate
+# 6 % 5
+# takes the remainder of 6 from 5 which is 1
 
-[1] + [2]
-# Adds both lists together [1,2]
+# 5 < 4 and 1 == 1
+# False
 
-[1] * 2
-# multiplies the list creating [1,1]
+# 'codeup' == 'codeup' and 'codeup' == 'Codeup'
+# False
 
-[1] * [2]
-# Can't multiply lists together
+#4 >= 0 and 1 !== '1'
+# Error invaild syntax
 
-[] + [] == []
+# 6 % 3 == 0
 # True
 
-{} + {}
-# Can't multiply dicts
+# 5 % 2 != 0
+# True
 
-daily_fee = 3
-The_Little_Mermaid = 3
-Brother_Bear = 5
+# [1] + 2
+# Type error
+
+# [1] + [2]
+# Adds both lists together creating a new list: [1,2]
+
+#[1] * 2
+# Multiplies the existing list by two which creates a new list: [1,1]
+
+#[1] * [2]
+# typeerror
+
+#[] + [] == []
+# True
+
+# {} + {}
+# typeerror
+
+The_little_mermaid = 3
+Brother_bear = 5
 Hercules = 1
-Total_rent = (daily_fee * The_Little_Mermaid) + (daily_fee * Brother_Bear) + (daily_fee * Hercules)
-print('$',Total_rent)
+total_fees = (The_little_mermaid * 3) + (Brother_bear * 3) + (Hercules * 3)
+print(total_fees)
 
 Google = 400
 Amazon = 380
 Facebook = 350
-Total_pay = (Google * 6) + (Amazon * 4) + (Facebook * 10)
-print('$',Total_pay)
+total_pay = (Google * 6) + (Amazon * 4) + (Facebook * 10)
+print(total_pay)
+
+can_be_enrolled = class_not_full and schd_not_conf
+class_not_full = True
+schd_not_conf = True
+can_be_enrolled
+# True
+
+class_is_full = False
+schd_conf = False
+
+enroll_stat = not (class_is_full or schd_conf)
+enroll_stat
+
+purch_more_than_two = True
+prod_not_exp = True
+premium_member = False
+
+discount_elig = prod_not_exp and (purch_more_than_two)
+discount_elig
+# True
 
 username = 'Codeup'
 password = 'notastrongpassword'
+
+password_length = length(password) >= 5
+username_length = length(username) <=20
+qual = password != username
+user_and_password_valid = password_length and user_name_length and qual
+user_and_password_valid
+# True
 
 
 
