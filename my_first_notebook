@@ -1,0 +1,7 @@
+greeting = "Hello World"
+print(greeting)
+2 + 2
+
+# Command + A selects all cells
+# Command + S saves and checkpoints
+# Command + return runs all selected cells
