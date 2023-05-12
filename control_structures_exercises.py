@@ -31,16 +31,30 @@ elif day == 'Friday':
 else:
     print("weekend")
 
+hours_per_day = 8
+days_per_week = 5
+hours_per_week = hours_per_day * days_per_week
 
+hours_per_week = 40
+hourly_rate = 40
+hourly_rate = 40
 
+overtime_pay = 1.5 * hourly_rate
+weekly_pay = (hours_per_week * hourly_rate) + overtime_pay
 
+hours_worked = input('How many hours did you work this week?: ')
+h= float(hours_worked)
 
+hourly_pay = input('What is your hourly pay?: ')
+pay= float(hourly_pay)
 
+if h <= 40:
+    pay = h*hourly_pay
+elif h > 40:
+    print('You worked overtime this week!')
+    pay = ((h-40)*pay*1.5)+pay*40   
 
-
-
-
-
+print ("Your weekly paycheck is %.2f" %pay)
 
 number = 5
 
@@ -136,8 +150,8 @@ while True:
     else:
         print('Thats not a positive number!')
 
-print('number | squared | cubed')
-print('-------|---------|------')
+integer = int(input("What number would you like to go up to?: "))
 
-for i in range(1, user_input+1):
-    print()
+for i in range(integer):
+    print(f'{i} | {i**2}  | {i**3}')  
+
